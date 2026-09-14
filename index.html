@@ -3,73 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixly | AI Solutions for Business Growth</title>
+    <title>Fixly | Enterprise AI Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html { scroll-behavior: smooth; }
         body { 
-            background-color: #020617; /* Ultra-deep slate */
+            background-color: #000000; /* True Black for OLED premium feel */
         }
         .glass-nav {
-            background: rgba(2, 6, 23, 0.8);
-            backdrop-filter: blur(16px);
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .feature-card {
-            background: linear-gradient(145deg, rgba(30, 58, 138, 0.15) 0%, rgba(2, 6, 23, 0) 100%);
-            border: 1px solid rgba(59, 130, 246, 0.2);
+        .premium-card {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            transition: all 0.4s ease;
         }
-        .feature-card:hover {
-            border-color: rgba(56, 189, 248, 0.6);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+        .premium-card:hover {
+            border-color: #1e3a8a; /* Your logo's royal blue */
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px -10px rgba(30, 58, 138, 0.3);
         }
-        .contact-card {
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(2, 6, 23, 0.9) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-        /* Glowing Orbs for a premium AI aesthetic */
-        .glow-bg {
+        /* Subtle spotlight effect for the hero section */
+        .spotlight {
             position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 100vw;
             height: 100vh;
-            top: 0;
-            left: 0;
-            overflow: hidden;
+            background: radial-gradient(circle at top, rgba(30, 58, 138, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
             z-index: -1;
-        }
-        .glow-1 {
-            position: absolute; top: -20%; left: -10%; width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(56,189,248,0.15) 0%, rgba(0,0,0,0) 70%);
-        }
-        .glow-2 {
-            position: absolute; top: 40%; right: -10%; width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(168,85,247,0.1) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
         }
     </style>
 </head>
-<body class="text-slate-300 font-sans antialiased relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+<body class="text-neutral-400 font-sans antialiased relative overflow-x-hidden selection:bg-blue-900 selection:text-white">
 
-    <!-- Ambient Background Effects -->
-    <div class="glow-bg">
-        <div class="glow-1"></div>
-        <div class="glow-2"></div>
-    </div>
+    <div class="spotlight"></div>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <!-- Inline SVG Logo -->
+                <!-- Inline SVG Logo in Premium Royal Blue -->
                 <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="45" fill="none" stroke="#38bdf8" stroke-width="8"/>
-                    <path d="M30 60 L50 40 L70 60" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M30 45 L50 25 L70 45" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M30 75 L50 55 L70 75" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#1e3a8a" stroke-width="8"/>
+                    <path d="M30 60 L50 40 L70 60" fill="none" stroke="#1e3a8a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M30 45 L50 25 L70 45" fill="none" stroke="#1e3a8a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M30 75 L50 55 L70 75" fill="none" stroke="#1e3a8a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <span class="text-2xl font-bold text-white tracking-tight">FIXLY</span>
             </div>
-            <a href="#contact" class="hidden md:inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(56,189,248,0.4)]">
+            <a href="#contact" class="hidden md:inline-block bg-white hover:bg-neutral-200 text-black font-semibold py-2 px-6 rounded-full transition-all duration-300">
                 Get Early Access
             </a>
         </div>
@@ -79,71 +66,69 @@
     <section class="pt-48 pb-24 px-6 text-center max-w-5xl mx-auto">
         <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
             Intelligent AI Solutions <br class="hidden md:block" />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">for Business Growth</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 to-neutral-500">for Business Growth</span>
         </h1>
-        <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-lg md:text-xl text-neutral-400 mb-10 max-w-2xl mx-auto leading-relaxed">
             We are building the next generation of AI tools designed specifically to help business owners streamline operations, cut costs, and scale efficiently. 
         </p>
-        <a href="#contact" class="inline-block bg-white text-slate-900 font-bold py-4 px-10 rounded-full text-lg hover:bg-slate-200 transition-all duration-300 hover:scale-105 shadow-xl">
+        <a href="#contact" class="inline-block bg-white text-black font-semibold py-4 px-10 rounded-full text-lg hover:bg-neutral-200 transition-all duration-300 hover:scale-105">
             Join the Waitlist
         </a>
     </section>
 
     <!-- Features Section -->
     <section class="py-20 px-6 max-w-7xl mx-auto relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="feature-card p-8 rounded-2xl hover:-translate-y-2 transition-all duration-300 text-left">
-                <div class="w-14 h-14 bg-blue-900/40 rounded-xl flex items-center justify-center mb-6 border border-cyan-500/30 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
-                    <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="premium-card p-10 rounded-2xl text-left">
+                <div class="w-12 h-12 mb-8 flex items-center justify-center">
+                    <svg class="w-8 h-8 text-neutral-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Boost Efficiency</h3>
-                <p class="text-slate-400 leading-relaxed">Automate repetitive tasks and free up your team's time to focus on what actually matters.</p>
+                <h3 class="text-xl font-semibold text-white mb-3">Boost Efficiency</h3>
+                <p class="text-neutral-500 leading-relaxed text-sm">Automate repetitive tasks and free up your team's time to focus on what actually matters.</p>
             </div>
-            <div class="feature-card p-8 rounded-2xl hover:-translate-y-2 transition-all duration-300 text-left">
-                <div class="w-14 h-14 bg-blue-900/40 rounded-xl flex items-center justify-center mb-6 border border-cyan-500/30 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
-                    <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            <div class="premium-card p-10 rounded-2xl text-left">
+                <div class="w-12 h-12 mb-8 flex items-center justify-center">
+                    <svg class="w-8 h-8 text-neutral-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Data-Driven Growth</h3>
-                <p class="text-slate-400 leading-relaxed">Leverage AI to analyze your business data and uncover hidden opportunities for expansion.</p>
+                <h3 class="text-xl font-semibold text-white mb-3">Data-Driven Growth</h3>
+                <p class="text-neutral-500 leading-relaxed text-sm">Leverage AI to analyze your business data and uncover hidden opportunities for expansion.</p>
             </div>
-            <div class="feature-card p-8 rounded-2xl hover:-translate-y-2 transition-all duration-300 text-left">
-                <div class="w-14 h-14 bg-blue-900/40 rounded-xl flex items-center justify-center mb-6 border border-cyan-500/30 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
-                    <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            <div class="premium-card p-10 rounded-2xl text-left">
+                <div class="w-12 h-12 mb-8 flex items-center justify-center">
+                    <svg class="w-8 h-8 text-neutral-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Enterprise Security</h3>
-                <p class="text-slate-400 leading-relaxed">Your data is safe. We utilize top-tier encryption and privacy protocols to protect your business.</p>
+                <h3 class="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
+                <p class="text-neutral-500 leading-relaxed text-sm">Your data is safe. We utilize top-tier encryption and privacy protocols to protect your business.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact / Waitlist Section -->
     <section id="contact" class="py-24 px-6 relative z-10">
-        <div class="max-w-xl mx-auto contact-card p-10 rounded-3xl text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Partner with Fixly</h2>
-            <p class="text-slate-400 mb-8">Leave your details below to get in touch or secure your spot for early access to our AI solutions.</p>
+        <div class="max-w-md mx-auto premium-card p-10 rounded-3xl text-center">
+            <h2 class="text-2xl font-semibold text-white mb-3">Partner with Fixly</h2>
+            <p class="text-neutral-500 mb-8 text-sm">Secure your spot for early access.</p>
             
             <!-- Email Form routing to your address -->
-            <form action="https://formsubmit.co/fixlybussiness@gmail.com" method="POST" class="space-y-5">
-                
-                <!-- Anti-spam & Redirect settings -->
+            <form action="https://formsubmit.co/fixlybussiness@gmail.com" method="POST" class="space-y-4">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="New Inquiry from Fixly Website!">
                 
-                <input type="text" name="name" placeholder="Your Name" required class="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full px-5 py-4 rounded-xl bg-neutral-900 border border-neutral-800 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 transition-colors text-sm">
                 
-                <input type="email" name="email" placeholder="Business Email Address" required class="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
+                <input type="email" name="email" placeholder="Business Email Address" required class="w-full px-5 py-4 rounded-xl bg-neutral-900 border border-neutral-800 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 transition-colors text-sm">
                 
-                <textarea name="message" rows="4" placeholder="Tell us about your business needs..." required class="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors resize-none"></textarea>
+                <textarea name="message" rows="3" placeholder="Tell us about your business needs..." required class="w-full px-5 py-4 rounded-xl bg-neutral-900 border border-neutral-800 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 transition-colors resize-none text-sm"></textarea>
                 
-                <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:shadow-[0_0_25px_rgba(56,189,248,0.5)]">
-                    Send Message
+                <button type="submit" class="w-full bg-white hover:bg-neutral-200 text-black font-semibold py-4 px-8 rounded-xl transition-all duration-300 mt-2">
+                    Submit Request
                 </button>
             </form>
         </div>
     </section>
 
-    <footer class="py-10 text-center border-t border-white/5 mt-10 relative z-10">
-        <p class="text-slate-500">&copy; 2026 Fixly. All rights reserved.</p>
+    <footer class="py-12 text-center border-t border-neutral-900 mt-10 relative z-10">
+        <p class="text-neutral-600 text-sm">&copy; 2026 Fixly. All rights reserved.</p>
     </footer>
 
 </body>
